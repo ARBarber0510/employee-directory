@@ -11,7 +11,7 @@ export default class DataArea extends Component {
        filteredUsers: [{}]
    } 
 
-   jeadings = [
+   headings = [
        {name: "Image", width:"10%"},
        {name: "Name", width:"10%"},
        {name: "Phone", width:"20%"},
