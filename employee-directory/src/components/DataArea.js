@@ -59,6 +59,7 @@ export default class DataArea extends Component {
     this.setState({ filteredUsers: sortedUsers});
    }
 
+//    Defines handleSearchChange for Nav and Searchbox
    handleSearchChange = event => {
        const filter = event.target.value;
        const filteredList = this.state.users.filter(item => {
