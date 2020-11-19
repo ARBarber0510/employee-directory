@@ -40,8 +40,10 @@ function DataBody({ users }) {
                                 {formatDate(dob.date)}
                             </td>
                         </tr>
-                    )
+                    );
                 })
+            ) : (
+                
             )}
         </tbody>
     )
