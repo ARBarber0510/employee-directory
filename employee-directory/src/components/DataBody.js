@@ -43,8 +43,10 @@ function DataBody({ users }) {
                     );
                 })
             ) : (
-                
+               <></> 
             )}
         </tbody>
-    )
+    );
 }
+
+export default DataBody;
