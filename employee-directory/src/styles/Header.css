@@ -1,9 +1,9 @@
 .header {
   text-align: center;
-  background-color: #190150;
+  background-color: rgb(2, 43, 58);
 }
 
 h1,
 p {
-  color: #61dafb;
+  color: rgb(191, 219, 247);
 }

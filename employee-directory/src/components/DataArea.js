@@ -14,11 +14,13 @@ export default class DataArea extends Component {
        order: "descend",
        filteredUsers: [{}]
    } 
-
+/* 
+Setting the headings properties, with dfferent widths
+*/
    headings = [
        {name: "Image", width:"10%"},
-       {name: "Name", width:"10%"},
-       {name: "Phone", width:"20%"},
+       {name: "Name", width:"20%"},
+       {name: "Phone", width:"30%"},
        {name: "Email", width:"20%"},
        {name: "DOB", width:"10%"}
    ]
