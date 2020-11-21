@@ -4,6 +4,10 @@ import Nav from "./Nav";
 import API from "../utils/API";
 import "../styles/DataArea.css";
 
+
+/* 
+Defining state with 3 attributes: users, order, filtered user.
+*/
 export default class DataArea extends Component {
    state = {
        users: [{}],
