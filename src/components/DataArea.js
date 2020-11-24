@@ -14,9 +14,10 @@ export default class DataArea extends Component {
        order: "descend",
        filteredUsers: [{}]
    } 
-/* 
-Setting the headings properties, with dfferent widths
-*/
+
+
+// Setting the headings properties for the DataTable object
+
    headings = [
        {name: "Image", width:"10%"},
        {name: "Name", width:"20%"},
@@ -25,6 +26,7 @@ Setting the headings properties, with dfferent widths
        {name: "DOB", width:"10%"}
    ]
 
+// Set the data to ascending order.
    handleSort = heading => {
        if (this.state.order === "descend") {
         this.setState({
@@ -36,6 +38,7 @@ Setting the headings properties, with dfferent widths
         })
        }
 
+// Compare function to sort elements based on if one is greater than the other
     const compareFnc = (a, b) => {
         if (this.state.order === "ascend") {
             if (a[heading] === undefined) {
@@ -69,7 +72,8 @@ Setting the headings properties, with dfferent widths
    handleSearchChange = event => {
        const filter = event.target.value;
        const filteredList = this.state.users.filter(item => {
-           let values = Object.values(item)
+        //   Merge data and see if users search is inside
+            let values = Object.values(item)
                 .join("")
                 .toLowerCase();
             return values.indexOf(filter.toLowerCase()) !== -1;
@@ -77,10 +81,12 @@ Setting the headings properties, with dfferent widths
        this.setState({ filteredUsers: filteredList});
    }
 
+//   Makes axios call to API and populates users and filteredUsers arrays.
    componentDidMount() {
        API.getUsers().then(results => {
            this.setState({
-               users: results.data.results
+               users: results.data.results,
+               filteredUsers: results.data.results
            });
        });
    }
